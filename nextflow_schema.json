@@ -267,6 +267,26 @@
                     "help_text": "Allows string values that are parseable as numbers or booleans. For further information see [JSONSchema docs](https://github.com/everit-org/json-schema#lenient-mode)."
                 }
             }
+        },
+        "this_is_new": {
+            "title": "This is new",
+            "type": "object",
+            "description": "What",
+            "default": "",
+            "properties": {
+                "adapters": {
+                    "type": "string",
+                    "description": "Sequence adapters"
+                },
+                "save_trimmed_fail": {
+                    "type": "boolean",
+                    "description": "Something"
+                },
+                "save_merged": {
+                    "type": "boolean",
+                    "description": "Something else"
+                }
+            }
         }
     },
     "allOf": [
@@ -284,6 +304,9 @@
         },
         {
             "$ref": "#/definitions/generic_options"
+        },
+        {
+            "$ref": "#/definitions/this_is_new"
         }
     ]
 }
